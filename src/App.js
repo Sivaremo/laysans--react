@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Footer from './Elements/Footer';
 import MetaTags from './Elements/MetaTags';
+import Clients from './pages/Client';
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/client" element={<Clients />} />
       </Routes>
     </div>
     <Footer/>

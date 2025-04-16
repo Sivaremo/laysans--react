@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Use this instead of next/link
-
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation(); // to get current pathname
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      setScrolled(scrollTop > 50);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location]);
+
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'scrolled' : ''} navbar-dark bg-dark`}>
+    <nav className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''} navbar-dark bg-dark`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">Laysans Solutions</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -24,22 +28,22 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
+              <Link className={`nav-link ${isActive('/about') ? 'active' : ''}`} to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/careers">Careers</Link>
+              <Link className={`nav-link ${isActive('/careers') ? 'active' : ''}`} to="/careers">Careers</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/client">Clients</Link>
+              <Link className={`nav-link ${isActive('/client') ? 'active' : ''}`} to="/client">Clients</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/services">Services</Link>
+              <Link className={`nav-link ${isActive('/services') ? 'active' : ''}`} to="/services">Services</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className={`nav-link ${isActive('/contact') ? 'active' : ''}`} to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
