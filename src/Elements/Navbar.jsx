@@ -19,9 +19,9 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''} navbar-dark bg-dark`}>
+    <nav className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Laysans Solutions</Link>
+        <Link className="navbar-brand" to="/" style={{color: '#ffff'}}>Laysans Solutions</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon" />
         </button>

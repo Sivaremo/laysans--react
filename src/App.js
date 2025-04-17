@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Footer from './Elements/Footer';
 import MetaTags from './Elements/MetaTags';
 import Clients from './pages/Client';
+import Careers from './pages/Careers';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/client" element={<Clients />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
     </div>
     <Footer/>
