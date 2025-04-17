@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container-fluid">
+      <div className="container-fluid my-2">
         <Link className="navbar-brand" to="/" style={{color: '#ffff'}}>Laysans Solutions</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon" />
