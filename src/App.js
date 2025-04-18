@@ -9,24 +9,25 @@ import Clients from './pages/Client';
 import Careers from './pages/Careers';
 import Services from './pages/Services';
 import CareerForm from './pages/CareerForm';
+
 function App() {
   return (
-    <Router>
-      <MetaTags/>
-    <Navbar /> {/* Optional Navbar */}
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/client" element={<Clients />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/careerform" element={<CareerForm />} />        
-      </Routes>
-    </div>
-    <Footer/>
-  </Router>
+    <Router basename="/your-repo-name"> {/* 👈 Add your GitHub repo name here */}
+      <MetaTags />
+      <Navbar />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/client" element={<Clients />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/careerform" element={<CareerForm />} />
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
