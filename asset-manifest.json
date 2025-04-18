@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/laysans/static/css/main.5e141bd0.css",
+    "main.js": "/laysans/static/js/main.9fb35a58.js",
+    "static/js/453.60caa125.chunk.js": "/laysans/static/js/453.60caa125.chunk.js",
+    "static/media/bg.jpg": "/laysans/static/media/bg.4a9d46f64a42964885d4.jpg",
+    "static/media/Guest-with-camera-gear-on-safari-in-Botswana-Pangolin-Photo-Safaris-scaled.png": "/laysans/static/media/Guest-with-camera-gear-on-safari-in-Botswana-Pangolin-Photo-Safaris-scaled.38d8286fcc73279f3d68.png",
+    "static/media/bg1.jpg": "/laysans/static/media/bg1.1bc392a8fd745f9615ac.jpg",
+    "static/media/nft-3-1-1440x1080.jpg": "/laysans/static/media/nft-3-1-1440x1080.00bf3f931c1daef964b4.jpg",
+    "static/media/morocco-tangier-photography-camera.jpg": "/laysans/static/media/morocco-tangier-photography-camera.b649a7deedd2be9759b8.jpg",
+    "index.html": "/laysans/index.html",
+    "main.5e141bd0.css.map": "/laysans/static/css/main.5e141bd0.css.map",
+    "main.9fb35a58.js.map": "/laysans/static/js/main.9fb35a58.js.map",
+    "453.60caa125.chunk.js.map": "/laysans/static/js/453.60caa125.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e141bd0.css",
+    "static/js/main.9fb35a58.js"
+  ]
+}
